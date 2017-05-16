@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>jQuery/JavaScript Blackjack</title>
+	<title>Blackjack in jQuery/JavaScript</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -12,13 +12,67 @@
 </head>
 <body>
 
+<!-- ////////LAYOUT////////
+1. Create an element for the table
+	- Make it green
+	- Give it a white border
+2. Create an element for the hands of the dealer and player
+3. Create an element for the dealer's total and the player's total
+4. Create an element for each card in each hand, with a maximum of 6 cards
+5. Make a deal, hit, and stand button -->
+
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12">
-			<h1>Sanity Check</h1>
+		<div class="col-sm-12 table">
+			<div class="row">
+				<!-- This will hold the dealer total, as well as all 6 dealer cards. -->
+				<div class="col-sm-12 dealer-hand-wrapper">
+					<!-- This will hold the dealer's total. -->
+					<div class="col-sm-2 dealer-total">
+						Dealer Total: 0
+					</div>
+					<div class="col-sm-10 dealer-cards">
+						<div class="card card-1"></div>
+						<div class="card card-2"></div>
+						<div class="card card-3"></div>
+						<div class="card card-4"></div>
+						<div class="card card-5"></div>
+						<div class="card card-6"></div> 
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- This will hold the dealer total, as well as all 6 dealer cards. -->
+				<div class="col-sm-12 player-hand-wrapper">
+					<!-- This will hold the dealer's total. -->
+					<div class="col-sm-2 player-total">
+						Player Total: 0
+					</div>
+					<div class="col-sm-10 player-cards">
+						<div class="card card-1"></div>
+						<div class="card card-2"></div>
+						<div class="card card-3"></div>
+						<div class="card card-4"></div>
+						<div class="card card-5"></div>
+						<div class="card card-6"></div> 
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-2">
+					<button class="btn btn-primary deal-button">Deal</button>
+				</div>
+				<div class="col-sm-2 col-sm-offset-1">
+					<button class="btn btn-danger hit-button">Hit</button>
+				</div>
+				<div class="col-sm-2 col-sm-offset-2">
+					<button class="btn btn-warning stand-button">Stand</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
 
 </body>
 </html>
